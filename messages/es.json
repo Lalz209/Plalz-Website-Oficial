@@ -1,0 +1,169 @@
+{
+  "HomePage": {
+    "title": "Bienvenido a Plalz",
+    "description": "Tu plataforma de comercio electrónico de próxima generación",
+    "getStarted": "Comenzar",
+    "learnMore": "Saber más"
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "webDevelopment": "Desarrollo Web",
+    "maintenance": "Mantenimiento",
+    "seo": "SEO",
+    "hosting": "Hosting",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "Cart": {
+    "title": "Carrito",
+    "item": "artículo",
+    "items": "artículos",
+    "empty": "Tu carrito está vacío",
+    "total": "Total",
+    "viewCart": "Ver carrito"
+  },
+  "User": {
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "profile": "Perfil",
+    "orders": "Pedidos",
+    "settings": "Configuración",
+    "logout": "Cerrar sesión"
+  },
+  "Footer": {
+    "services": "Servicios",
+    "webDevelopment": "Desarrollo Web",
+    "maintenance": "Mantenimiento",
+    "seo": "SEO",
+    "hosting": "Hosting",
+    "company": "Empresa",
+    "about": "Acerca de",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "careers": "Carreras",
+    "legal": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "cookies": "Cookies",
+    "contact": "Contacto",
+    "newsletter": {
+      "title": "Suscríbete a nuestro newsletter",
+      "description": "Recibe las últimas noticias y actualizaciones",
+      "placeholder": "Tu email",
+      "subscribe": "Suscribirse"
+    },
+    "copyright": "Todos los derechos reservados."
+  },
+  "Theme": {
+    "toggleTheme": "Cambiar tema",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "Components": {
+    "title": "Componentes UI",
+    "description": "Una colección de componentes reutilizables construidos con Radix UI y Tailwind CSS.",
+    "backToHome": "Volver al inicio",
+    "buttons": {
+      "title": "Botones",
+      "description": "Botones con diferentes variantes y tamaños"
+    },
+    "inputs": {
+      "title": "Inputs",
+      "description": "Campos de entrada con validación y estados",
+      "defaultInput": {
+        "label": "Input por defecto",
+        "placeholder": "Ingresa texto..."
+      },
+      "errorState": {
+        "label": "Estado de error",
+        "placeholder": "Input inválido",
+        "error": "Este campo es requerido"
+      },
+      "successState": {
+        "label": "Estado de éxito",
+        "placeholder": "Input válido",
+        "success": "¡Se ve bien!"
+      },
+      "withHelperText": {
+        "label": "Con texto de ayuda",
+        "placeholder": "Dirección de email",
+        "helperText": "Nunca compartiremos tu email"
+      }
+    },
+    "cards": {
+      "title": "Tarjetas",
+      "description": "Contenedores flexibles para mostrar contenido"
+    },
+    "badges": {
+      "title": "Badges",
+      "description": "Pequeñas etiquetas para mostrar estado o categoría",
+      "removable": "Removible"
+    },
+    "dialog": {
+      "title": "Diálogo",
+      "description": "Ventanas modales para interacciones importantes",
+      "content": "El contenido del diálogo va aquí."
+    },
+    "dropdownMenu": {
+      "title": "Menú desplegable",
+      "description": "Menús contextuales con opciones",
+      "myAccount": "Mi cuenta",
+      "profile": "Perfil",
+      "settings": "Configuración",
+      "billing": "Facturación",
+      "logout": "Cerrar sesión"
+    },
+    "tabs": {
+      "title": "Pestañas",
+      "description": "Navegación por pestañas para organizar contenido",
+      "tab1": "Pestaña 1",
+      "tab2": "Pestaña 2",
+      "tab3": "Pestaña 3",
+      "content1": "Contenido de la pestaña 1. Este es el primer contenido de pestaña.",
+      "content2": "Contenido de la pestaña 2. Este es el segundo contenido de pestaña.",
+      "content3": "Contenido de la pestaña 3. Este es el tercer contenido de pestaña."
+    },
+    "switch": {
+      "title": "Interruptores",
+      "description": "Controles de encendido/apagado",
+      "enableNotifications": "Habilitar notificaciones",
+      "receiveEmailNotifications": "Recibir notificaciones por email sobre actualizaciones",
+      "smallSwitch": "Interruptor pequeño",
+      "largeSwitch": "Interruptor grande"
+    },
+    "progress": {
+      "title": "Barras de progreso",
+      "description": "Indicadores visuales de progreso",
+      "uploadProgress": "Progreso de subida"
+    },
+    "skeleton": {
+      "title": "Skeletons",
+      "description": "Estados de carga"
+    },
+    "avatar": {
+      "title": "Avatares",
+      "description": "Imágenes de perfil de usuario"
+    },
+    "toast": {
+      "title": "Notificaciones",
+      "description": "Mensajes de notificación",
+      "defaultToast": "Toast por defecto",
+      "successToast": "Toast de éxito",
+      "warningToast": "Toast de advertencia",
+      "errorToast": "Toast de error"
+    }
+  },
+  "Common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar"
+  }
+} 

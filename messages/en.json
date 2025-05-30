@@ -1,0 +1,169 @@
+{
+  "HomePage": {
+    "title": "Welcome to Plalz",
+    "description": "Your next-generation e-commerce platform",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "webDevelopment": "Web Development",
+    "maintenance": "Maintenance",
+    "seo": "SEO",
+    "hosting": "Hosting",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "Cart": {
+    "title": "Cart",
+    "item": "item",
+    "items": "items",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "viewCart": "View cart"
+  },
+  "User": {
+    "login": "Login",
+    "register": "Register",
+    "profile": "Profile",
+    "orders": "Orders",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "Footer": {
+    "services": "Services",
+    "webDevelopment": "Web Development",
+    "maintenance": "Maintenance",
+    "seo": "SEO",
+    "hosting": "Hosting",
+    "company": "Company",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "careers": "Careers",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies",
+    "contact": "Contact",
+    "newsletter": {
+      "title": "Subscribe to our newsletter",
+      "description": "Get the latest news and updates",
+      "placeholder": "Your email",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "All rights reserved."
+  },
+  "Theme": {
+    "toggleTheme": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Components": {
+    "title": "UI Components",
+    "description": "A collection of reusable components built with Radix UI and Tailwind CSS.",
+    "backToHome": "Back to Home",
+    "buttons": {
+      "title": "Buttons",
+      "description": "Buttons with different variants and sizes"
+    },
+    "inputs": {
+      "title": "Inputs",
+      "description": "Input fields with validation and states",
+      "defaultInput": {
+        "label": "Default Input",
+        "placeholder": "Enter text..."
+      },
+      "errorState": {
+        "label": "Error State",
+        "placeholder": "Invalid input",
+        "error": "This field is required"
+      },
+      "successState": {
+        "label": "Success State",
+        "placeholder": "Valid input",
+        "success": "Looks good!"
+      },
+      "withHelperText": {
+        "label": "With Helper Text",
+        "placeholder": "Email address",
+        "helperText": "We'll never share your email"
+      }
+    },
+    "cards": {
+      "title": "Cards",
+      "description": "Flexible containers for displaying content"
+    },
+    "badges": {
+      "title": "Badges",
+      "description": "Small labels for displaying status or category",
+      "removable": "Removable"
+    },
+    "dialog": {
+      "title": "Dialog",
+      "description": "Modal windows for important interactions",
+      "content": "Dialog content goes here."
+    },
+    "dropdownMenu": {
+      "title": "Dropdown Menu",
+      "description": "Contextual menus with options",
+      "myAccount": "My Account",
+      "profile": "Profile",
+      "settings": "Settings",
+      "billing": "Billing",
+      "logout": "Logout"
+    },
+    "tabs": {
+      "title": "Tabs",
+      "description": "Tab navigation for organizing content",
+      "tab1": "Tab 1",
+      "tab2": "Tab 2",
+      "tab3": "Tab 3",
+      "content1": "Content for tab 1. This is the first tab content.",
+      "content2": "Content for tab 2. This is the second tab content.",
+      "content3": "Content for tab 3. This is the third tab content."
+    },
+    "switch": {
+      "title": "Switches",
+      "description": "On/off toggle controls",
+      "enableNotifications": "Enable notifications",
+      "receiveEmailNotifications": "Receive email notifications about updates",
+      "smallSwitch": "Small switch",
+      "largeSwitch": "Large switch"
+    },
+    "progress": {
+      "title": "Progress bars",
+      "description": "Visual progress indicators",
+      "uploadProgress": "Upload Progress"
+    },
+    "skeleton": {
+      "title": "Skeletons",
+      "description": "Loading states"
+    },
+    "avatar": {
+      "title": "Avatars",
+      "description": "User profile images"
+    },
+    "toast": {
+      "title": "Toasts",
+      "description": "Notification messages",
+      "defaultToast": "Default Toast",
+      "successToast": "Success Toast",
+      "warningToast": "Warning Toast",
+      "errorToast": "Error Toast"
+    }
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close"
+  }
+} 
