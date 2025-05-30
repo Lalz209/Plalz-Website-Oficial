@@ -3,6 +3,7 @@ import {
   Menu,
   X,
   ChevronDown,
+  ChevronRight,
   Search,
   ShoppingCart,
   User,
@@ -54,6 +55,17 @@ import {
   Info,
   Star,
   Crown,
+  Paperclip,
+  Send,
+  RefreshCw,
+  FileText,
+  Grid,
+  List,
+  Bell,
+  LogOut,
+  Filter,
+  ExternalLink,
+  BookOpen,
 } from 'lucide-react';
 
 export interface IconProps {
@@ -66,6 +78,7 @@ export {
   Menu as MenuIcon,
   X as CloseIcon,
   ChevronDown as ChevronDownIcon,
+  ChevronRight as ChevronRightIcon,
   Search as SearchIcon,
   ShoppingCart as ShoppingCartIcon,
   User as UserIcon,
@@ -118,6 +131,17 @@ export {
   Star as StarIcon,
   Crown as CrownIcon,
   X as XIcon,
+  Paperclip as AttachmentIcon,
+  Send as SendIcon,
+  RefreshCw as RefreshCwIcon,
+  FileText as FileTextIcon,
+  Grid as GridIcon,
+  List as ListIcon,
+  Bell as BellIcon,
+  LogOut as LogOutIcon,
+  Filter as FilterIcon,
+  ExternalLink as ExternalLinkIcon,
+  BookOpen as BookOpenIcon,
 };
 
 // Custom social media icons

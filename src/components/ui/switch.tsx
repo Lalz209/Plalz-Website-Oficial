@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import * as SwitchPrimitive from "@radix-ui/react-switch"
+import * as SwitchPrimitives from "@radix-ui/react-switch"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
@@ -38,27 +38,27 @@ const switchThumbVariants = cva(
 )
 
 export interface SwitchProps
-  extends React.ComponentPropsWithoutRef<typeof SwitchPrimitive.Root>,
+  extends React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>,
     VariantProps<typeof switchVariants> {
   label?: string
   description?: string
 }
 
 const Switch = React.forwardRef<
-  React.ElementRef<typeof SwitchPrimitive.Root>,
+  React.ElementRef<typeof SwitchPrimitives.Root>,
   SwitchProps
 >(({ className, size, label, description, id, ...props }, ref) => {
   const switchId = id || React.useId()
 
   const switchElement = (
-    <SwitchPrimitive.Root
+    <SwitchPrimitives.Root
       id={switchId}
       className={cn(switchVariants({ size }), className)}
       {...props}
       ref={ref}
     >
-      <SwitchPrimitive.Thumb className={cn(switchThumbVariants({ size }))} />
-    </SwitchPrimitive.Root>
+      <SwitchPrimitives.Thumb className={cn(switchThumbVariants({ size }))} />
+    </SwitchPrimitives.Root>
   )
 
   if (label || description) {
@@ -86,6 +86,6 @@ const Switch = React.forwardRef<
 
   return switchElement
 })
-Switch.displayName = SwitchPrimitive.Root.displayName
+Switch.displayName = SwitchPrimitives.Root.displayName
 
 export { Switch, switchVariants } 
