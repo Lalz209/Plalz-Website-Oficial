@@ -47,7 +47,7 @@ export default function ComponentsPage() {
   const [progress, setProgress] = useState(60)
   const [switchValue, setSwitchValue] = useState(false)
   const { toast } = useToast()
-  const t = useTranslations('components')
+  const t = useTranslations('Components')
 
   const showToast = (variant: "default" | "success" | "warning" | "destructive") => {
     toast({
