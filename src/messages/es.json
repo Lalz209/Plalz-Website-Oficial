@@ -1,0 +1,67 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cart": "Carrito",
+    "login": "Iniciar Sesión"
+  },
+  "hero": {
+    "title": "Transformamos tus ideas en realidad digital",
+    "subtitle": "Creamos sitios web profesionales, tiendas online y soluciones digitales que impulsan tu negocio al siguiente nivel",
+    "cta": "Comenzar Proyecto",
+    "cta_secondary": "Ver Servicios"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones digitales completas para hacer crecer tu negocio",
+    "web_development": "Desarrollo Web",
+    "ecommerce": "E-commerce",
+    "maintenance": "Mantenimiento",
+    "seo": "SEO & Marketing"
+  },
+  "cart": {
+    "title": "Carrito de Compras",
+    "empty": "Tu carrito está vacío",
+    "add_to_cart": "Añadir al Carrito",
+    "remove": "Eliminar",
+    "quantity": "Cantidad",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "checkout": "Proceder al Pago"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "components": {
+    "title": "Componentes",
+    "description": "Biblioteca de componentes UI"
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "Cart": {
+    "title": "Carrito",
+    "items": "Artículos"
+  },
+  "User": {
+    "profile": "Perfil",
+    "settings": "Configuración"
+  },
+  "Footer": {
+    "copyright": "© 2024 Plalz. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  }
+} 

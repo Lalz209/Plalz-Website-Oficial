@@ -10,6 +10,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
 } from '@/components/ui/dropdown-menu';
 import { ChevronDownIcon } from '@/components/ui/icons';
 import { cn } from '@/lib/utils';
@@ -27,29 +29,33 @@ export function Navigation() {
   const navItems: NavItem[] = [
     {
       href: '/',
-      label: t('home'),
+      label: 'Inicio',
     },
     {
-      href: '/services',
-      label: t('services'),
+      href: '/servicios',
+      label: 'Servicios',
       children: [
-        { href: '/services/web-development', label: t('webDevelopment') },
-        { href: '/services/maintenance', label: t('maintenance') },
-        { href: '/services/seo', label: t('seo') },
-        { href: '/services/hosting', label: t('hosting') },
+        { href: '/servicios', label: 'Todos los Servicios' },
+        { href: '/servicios/paginas-web', label: 'Páginas Web' },
+        { href: '/servicios/paginas-web/corporativas', label: '• Páginas Corporativas' },
+        { href: '/servicios/paginas-web/e-commerce', label: '• Tiendas Online' },
+        { href: '/servicios/paginas-web/landing-pages', label: '• Landing Pages' },
+        { href: '/servicios/paginas-web/blogs', label: '• Blogs Profesionales' },
+        { href: '/servicios/mantenimiento', label: 'Mantenimiento Web' },
+        { href: '/servicios/mantenimiento/contenido', label: '• Mantenimiento de Contenido' },
       ],
     },
     {
       href: '/portfolio',
-      label: t('portfolio'),
+      label: 'Portfolio',
     },
     {
       href: '/blog',
-      label: t('blog'),
+      label: 'Blog',
     },
     {
       href: '/contact',
-      label: t('contact'),
+      label: 'Contacto',
     },
   ];
 
@@ -78,20 +84,45 @@ export function Navigation() {
                   <ChevronDownIcon size={16} />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-48">
-                {item.children.map((child) => (
-                  <DropdownMenuItem key={child.href} asChild>
-                    <Link
-                      href={child.href}
-                      className={cn(
-                        "w-full cursor-pointer",
-                        isActive(child.href) ? "bg-accent text-accent-foreground" : ""
-                      )}
-                    >
-                      {child.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
+              <DropdownMenuContent align="start" className="w-64">
+                <DropdownMenuLabel>Nuestros Servicios</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                {item.children.map((child, index) => {
+                  // Add separator before maintenance section
+                  if (child.label === 'Mantenimiento Web') {
+                    return (
+                      <div key={child.href}>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem asChild>
+                          <Link
+                            href={child.href}
+                            className={cn(
+                              "w-full cursor-pointer font-medium",
+                              isActive(child.href) ? "bg-accent text-accent-foreground" : ""
+                            )}
+                          >
+                            {child.label}
+                          </Link>
+                        </DropdownMenuItem>
+                      </div>
+                    );
+                  }
+                  
+                  return (
+                    <DropdownMenuItem key={child.href} asChild>
+                      <Link
+                        href={child.href}
+                        className={cn(
+                          "w-full cursor-pointer",
+                          child.label.startsWith('•') ? "text-sm text-muted-foreground pl-4" : "font-medium",
+                          isActive(child.href) ? "bg-accent text-accent-foreground" : ""
+                        )}
+                      >
+                        {child.label}
+                      </Link>
+                    </DropdownMenuItem>
+                  );
+                })}
               </DropdownMenuContent>
             </DropdownMenu>
           );
@@ -116,36 +147,39 @@ export function Navigation() {
 
 // Mobile Navigation Component
 export function MobileNavigation({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  const t = useTranslations('Navigation');
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const navItems: NavItem[] = [
     {
       href: '/',
-      label: t('home'),
+      label: 'Inicio',
     },
     {
-      href: '/services',
-      label: t('services'),
+      href: '/servicios',
+      label: 'Servicios',
       children: [
-        { href: '/services/web-development', label: t('webDevelopment') },
-        { href: '/services/maintenance', label: t('maintenance') },
-        { href: '/services/seo', label: t('seo') },
-        { href: '/services/hosting', label: t('hosting') },
+        { href: '/servicios', label: 'Todos los Servicios' },
+        { href: '/servicios/paginas-web', label: 'Páginas Web' },
+        { href: '/servicios/paginas-web/corporativas', label: '• Páginas Corporativas' },
+        { href: '/servicios/paginas-web/e-commerce', label: '• Tiendas Online' },
+        { href: '/servicios/paginas-web/landing-pages', label: '• Landing Pages' },
+        { href: '/servicios/paginas-web/blogs', label: '• Blogs Profesionales' },
+        { href: '/servicios/mantenimiento', label: 'Mantenimiento Web' },
+        { href: '/servicios/mantenimiento/contenido', label: '• Mantenimiento de Contenido' },
       ],
     },
     {
       href: '/portfolio',
-      label: t('portfolio'),
+      label: 'Portfolio',
     },
     {
       href: '/blog',
-      label: t('blog'),
+      label: 'Blog',
     },
     {
       href: '/contact',
-      label: t('contact'),
+      label: 'Contacto',
     },
   ];
 
@@ -196,6 +230,7 @@ export function MobileNavigation({ isOpen, onClose }: { isOpen: boolean; onClose
                           href={child.href}
                           className={cn(
                             "block py-2 px-4 text-sm transition-colors hover:text-primary",
+                            child.label.startsWith('•') ? "text-muted-foreground pl-6" : "font-medium",
                             isActive(child.href) ? "text-primary bg-accent rounded" : "text-foreground"
                           )}
                           onClick={onClose}
@@ -214,8 +249,8 @@ export function MobileNavigation({ isOpen, onClose }: { isOpen: boolean; onClose
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "block py-2 font-medium transition-colors hover:text-primary",
-                  isActive(item.href) ? "text-primary" : "text-foreground"
+                  "block py-2 px-4 font-medium transition-colors hover:text-primary",
+                  isActive(item.href) ? "text-primary bg-accent rounded" : "text-foreground"
                 )}
                 onClick={onClose}
               >

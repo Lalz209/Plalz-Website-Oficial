@@ -1,0 +1,67 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "login": "Login"
+  },
+  "hero": {
+    "title": "We transform your ideas into digital reality",
+    "subtitle": "We create professional websites, online stores and digital solutions that take your business to the next level",
+    "cta": "Start Project",
+    "cta_secondary": "View Services"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Complete digital solutions to grow your business",
+    "web_development": "Web Development",
+    "ecommerce": "E-commerce",
+    "maintenance": "Maintenance",
+    "seo": "SEO & Marketing"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "add_to_cart": "Add to Cart",
+    "remove": "Remove",
+    "quantity": "Quantity",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "checkout": "Proceed to Checkout"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "components": {
+    "title": "Components",
+    "description": "UI Components Library"
+  },
+  "Navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "Cart": {
+    "title": "Cart",
+    "items": "Items"
+  },
+  "User": {
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "Footer": {
+    "copyright": "© 2024 Plalz. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+} 
