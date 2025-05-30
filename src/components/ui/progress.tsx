@@ -16,9 +16,9 @@ const progressVariants = cva(
       },
       variant: {
         default: "",
-        success: "[&>div]:bg-success",
-        warning: "[&>div]:bg-warning",
-        destructive: "[&>div]:bg-destructive",
+        success: "[&>div]:bg-green-500",
+        warning: "[&>div]:bg-yellow-500",
+        destructive: "[&>div]:bg-red-500",
       },
     },
     defaultVariants: {
@@ -62,12 +62,12 @@ export interface ProgressProps
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
   ProgressProps
->(({ className, value = 0, size, variant, showValue, label, animated, ...props }, ref) => (
+>(({ className, value, showValue, label, size, variant, animated, ...props }, ref) => (
   <div className="w-full space-y-2">
     {(label || showValue) && (
-      <div className="flex justify-between text-sm">
+      <div className="flex justify-between items-center text-sm">
         {label && <span className="font-medium">{label}</span>}
-        {showValue && <span className="text-muted-foreground">{value}%</span>}
+        {showValue && <span className="text-muted-foreground">{value || 0}%</span>}
       </div>
     )}
     <ProgressPrimitive.Root
@@ -78,7 +78,7 @@ const Progress = React.forwardRef<
       <ProgressPrimitive.Indicator
         className={cn(
           "h-full w-full flex-1 bg-primary transition-all",
-          animated && "animate-pulse"
+          animated && "transition-transform duration-500 ease-out"
         )}
         style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
       />
@@ -131,11 +131,11 @@ const CircularProgress = React.forwardRef<HTMLDivElement, CircularProgressProps>
     const getColor = () => {
       switch (variant) {
         case "success":
-          return "stroke-success"
+          return "stroke-green-500"
         case "warning":
-          return "stroke-warning"
+          return "stroke-yellow-500"
         case "destructive":
-          return "stroke-destructive"
+          return "stroke-red-500"
         default:
           return "stroke-primary"
       }
