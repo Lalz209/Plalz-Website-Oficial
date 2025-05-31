@@ -1,4 +1,264 @@
 {
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "webDevelopment": "Web Development",
+    "ecommerce": "E-commerce",
+    "maintenance": "Maintenance",
+    "seo": "SEO",
+    "hosting": "Hosting",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "about": "About Us",
+    "contact": "Contact",
+    "pricing": "Pricing",
+    "quote": "Get Quote",
+    "search": "Search",
+    "searchPlaceholder": "Search products, services...",
+    "menu": "Menu",
+    "close": "Close",
+    "language": "Language"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Complete digital solutions to grow your business",
+    "webDevelopment": {
+      "title": "Web Development",
+      "description": "Modern, fast, and optimized websites to convert visitors into customers"
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Complete online stores with inventory management, secure payments, and detailed analytics"
+    },
+    "maintenance": {
+      "title": "Web Maintenance",
+      "description": "Keep your website updated, secure, and running perfectly"
+    },
+    "seo": {
+      "title": "SEO & Digital Marketing",
+      "description": "Increase your online visibility and attract more potential customers"
+    },
+    "hosting": {
+      "title": "Premium Hosting",
+      "description": "Fast, secure, and reliable web hosting for your project"
+    },
+    "web_development": {
+      "title": "Web Development"
+    }
+  },
+  "search": {
+    "title": "Search Results",
+    "placeholder": "What are you looking for?",
+    "button": "Search",
+    "results": "results found",
+    "noResults": "No results found for",
+    "suggestions": "Suggestions:",
+    "clear": "Clear Search"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "open": "Open",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "continue": "Continue",
+    "finish": "Finish",
+    "submit": "Submit",
+    "reset": "Reset",
+    "clear": "Clear",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "share": "Share",
+    "copy": "Copy",
+    "print": "Print"
+  },
+  "seo": {
+    "default_title": "Plalz - Professional Web Development & E-commerce in Madrid",
+    "default_description": "Web development agency specialized in professional websites, online stores, and digital solutions. Over 200 successful projects in Madrid and Spain.",
+    "keywords": "web development, web design, e-commerce, online store, SEO, hosting, web maintenance, Madrid, Spain, digital agency",
+    "home": {
+      "title": "Professional Web Development | Plalz Madrid",
+      "description": "We create professional websites and online stores that convert. Modern web development, SEO included, and 24/7 support. Request your free quote!"
+    },
+    "services": {
+      "title": "Web Development Services | Plalz",
+      "description": "Complete web development services: corporate websites, e-commerce, maintenance, SEO, and hosting. Professional digital solutions in Madrid."
+    },
+    "portfolio": {
+      "title": "Web Projects Portfolio | Plalz",
+      "description": "Discover our web development and e-commerce projects. Over 200 successful websites created for companies in Madrid and throughout Spain."
+    },
+    "contact": {
+      "title": "Contact - Plalz Web Agency Madrid",
+      "description": "Contact our web development agency in Madrid. Free quote for your web project. Phone: +34 91 123 45 67"
+    },
+    "about": {
+      "title": "About Us - Plalz Agency Madrid",
+      "description": "Meet our web development team in Madrid. Over 5 years creating successful digital solutions for businesses of all sizes."
+    },
+    "pricing": {
+      "title": "Web Development Pricing | Plalz Madrid",
+      "description": "Transparent pricing for web development and e-commerce. From €299 for professional websites. Free quote with no commitment."
+    },
+    "blog": {
+      "title": "Web Development Blog | Plalz",
+      "description": "Articles about web development, SEO, e-commerce, and technology. Tips and tutorials from our web development experts."
+    }
+  },
+  "hero": {
+    "title": "We Transform Ideas into Extraordinary Digital Experiences",
+    "subtitle": "Professional web development, advanced e-commerce, and digital solutions that drive your business to success",
+    "cta": {
+      "primary": "Start Project",
+      "secondary": "View Portfolio",
+      "quote": "Request Quote"
+    },
+    "features": {
+      "responsive": "Responsive Design",
+      "fast": "Fast Loading",
+      "secure": "100% Secure",
+      "support": "24/7 Support"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Web development experts with over 5 years creating successful digital solutions",
+    "description": "At Plalz, we combine creativity, technology, and strategy to create digital experiences that drive your business growth."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a project in mind? Let's talk and make it happen",
+    "form": {
+      "name": {
+        "label": "Full name",
+        "placeholder": "Your full name",
+        "error": "Name is required"
+      },
+      "email": {
+        "label": "Email address",
+        "placeholder": "your@email.com",
+        "error": "Enter a valid email"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell us about your project...",
+        "error": "Message is required"
+      },
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully! We'll contact you soon.",
+      "error": "Error sending message. Please try again."
+    }
+  },
+  "pricing": {
+    "title": "Plans & Pricing",
+    "subtitle": "Solutions adapted to every need and budget"
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Projects that demonstrate our experience and creativity",
+    "viewProject": "View Project",
+    "technologies": "Technologies",
+    "client": "Client"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles, tutorials, and news about web development and technology",
+    "readMore": "Read More",
+    "author": "Author",
+    "category": "Category"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "item": "item",
+    "items": "items",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "quantity": "Quantity",
+    "remove": "Remove",
+    "checkout": "Proceed to Checkout",
+    "addToCart": "Add to Cart",
+    "viewCart": "View Cart"
+  },
+  "auth": {
+    "login": {
+      "title": "Sign In",
+      "subtitle": "Access your account",
+      "email": "Email address",
+      "password": "Password",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "register": "Register here"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join our community",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email address",
+      "password": "Password",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "login": "Sign in here"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Services",
+      "webDevelopment": "Web Development",
+      "ecommerce": "E-commerce",
+      "maintenance": "Maintenance",
+      "seo": "SEO",
+      "hosting": "Hosting"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to receive the latest news and special offers",
+      "placeholder": "Your email address",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "© 2024 Plalz. All rights reserved."
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "description": "The page you're looking for doesn't exist or has been moved.",
+      "button": "Go Home"
+    },
+    "500": {
+      "title": "Server Error",
+      "description": "An internal error has occurred. Please try again later.",
+      "button": "Retry"
+    }
+  },
   "HomePage": {
     "title": "Welcome to Plalz",
     "description": "Your next-generation e-commerce platform",

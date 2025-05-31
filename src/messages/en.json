@@ -4,22 +4,188 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "pricing": "Pricing",
+    "quote": "Get Quote",
+    "search": "Search",
     "cart": "Cart",
-    "login": "Login"
+    "login": "Login",
+    "register": "Sign Up",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "logout": "Logout"
   },
   "hero": {
     "title": "We transform your ideas into digital reality",
     "subtitle": "We create professional websites, online stores and digital solutions that take your business to the next level",
     "cta": "Start Project",
-    "cta_secondary": "View Services"
+    "cta_secondary": "View Services",
+    "trusted_by": "Trusted by over {count} companies",
+    "stats": {
+      "projects": "Completed Projects",
+      "clients": "Happy Clients",
+      "years": "Years of Experience",
+      "team": "Team Members"
+    }
   },
   "services": {
     "title": "Our Services",
     "subtitle": "Complete digital solutions to grow your business",
-    "web_development": "Web Development",
-    "ecommerce": "E-commerce",
-    "maintenance": "Maintenance",
-    "seo": "SEO & Marketing"
+    "web_development": {
+      "title": "Web Development",
+      "description": "Modern and responsive websites with the latest technologies",
+      "features": ["React & Next.js", "Responsive Design", "SEO Optimized", "Superior Performance"]
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Complete online stores that convert visitors into customers",
+      "features": ["Shopping Cart", "Secure Payments", "Inventory Management", "Advanced Analytics"]
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "Continuous maintenance and support for your website",
+      "features": ["Updates", "Backups", "24/7 Monitoring", "Technical Support"]
+    },
+    "seo": {
+      "title": "SEO & Marketing",
+      "description": "Digital marketing strategies to increase your visibility",
+      "features": ["Technical SEO", "Content Marketing", "Social Media", "Google Ads"]
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We are a team passionate about creating exceptional digital experiences",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Transform ideas into exceptional digital experiences that generate real results for our clients."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be the leading web development agency in Spain, recognized for our innovation, quality and commitment."
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": "Innovation",
+      "quality": "Quality",
+      "transparency": "Transparency",
+      "commitment": "Commitment"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Meet the professionals who will make your project a reality"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Ready to start your project? Let's talk",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "subject": "Subject",
+      "message": "Message",
+      "inquiry_type": "Inquiry Type",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours"
+    },
+    "inquiry_types": {
+      "general": "General Inquiry",
+      "quote": "Request Quote",
+      "support": "Technical Support",
+      "partnership": "Partnerships",
+      "career": "Career Opportunities"
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Transparent plans for every need",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save": "Save {percentage}%",
+    "popular": "Most Popular",
+    "features": "Features",
+    "get_started": "Get Started",
+    "contact_sales": "Contact Sales",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfect for small projects",
+        "price": "299"
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Ideal for growing businesses",
+        "price": "599"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Custom solutions",
+        "price": "1299"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Discover some of our most outstanding projects",
+    "view_project": "View Project",
+    "live_demo": "Live Demo",
+    "case_study": "Case Study",
+    "technologies": "Technologies",
+    "client": "Client",
+    "year": "Year",
+    "category": "Category",
+    "filters": {
+      "all": "All",
+      "web": "Web Development",
+      "ecommerce": "E-commerce",
+      "mobile": "Mobile Apps",
+      "design": "Design"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest news and trends in web development",
+    "read_more": "Read More",
+    "read_time": "{minutes} min read",
+    "published_on": "Published on",
+    "by_author": "By {author}",
+    "categories": "Categories",
+    "tags": "Tags",
+    "related_posts": "Related Posts",
+    "share": "Share",
+    "comments": "Comments"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "What are you looking for?",
+    "results": "Search results",
+    "no_results": "No results found",
+    "suggestions": "Suggestions",
+    "recent": "Recent Searches",
+    "popular": "Popular Searches",
+    "clear_history": "Clear History",
+    "filters": {
+      "all": "All",
+      "services": "Services",
+      "blog": "Blog",
+      "portfolio": "Portfolio",
+      "pages": "Pages"
+    },
+    "sort": {
+      "relevance": "Relevance",
+      "date": "Date",
+      "popularity": "Popularity"
+    }
   },
   "cart": {
     "title": "Shopping Cart",
@@ -29,7 +195,32 @@
     "quantity": "Quantity",
     "subtotal": "Subtotal",
     "total": "Total",
-    "checkout": "Proceed to Checkout"
+    "checkout": "Proceed to Checkout",
+    "continue_shopping": "Continue Shopping",
+    "items_count": "{count, plural, =0 {No items} =1 {1 item} other {# items}}"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "remember": "Remember me",
+      "forgot_password": "Forgot your password?",
+      "submit": "Login",
+      "no_account": "Don't have an account?",
+      "register_link": "Sign up here"
+    },
+    "register": {
+      "title": "Create Account",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "terms": "I accept the terms and conditions",
+      "submit": "Create Account",
+      "have_account": "Already have an account?",
+      "login_link": "Login here"
+    }
   },
   "common": {
     "loading": "Loading...",
@@ -39,29 +230,78 @@
     "confirm": "Confirm",
     "save": "Save",
     "edit": "Edit",
-    "delete": "Delete"
+    "delete": "Delete",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "view_all": "View All",
+    "learn_more": "Learn More",
+    "get_started": "Get Started",
+    "contact_us": "Contact Us",
+    "try_again": "Try Again",
+    "coming_soon": "Coming Soon"
   },
-  "components": {
-    "title": "Components",
-    "description": "UI Components Library"
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "team": "Team",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Services",
+      "web_development": "Web Development",
+      "ecommerce": "E-commerce",
+      "maintenance": "Maintenance",
+      "consulting": "Consulting"
+    },
+    "resources": {
+      "title": "Resources",
+      "blog": "Blog",
+      "portfolio": "Portfolio",
+      "case_studies": "Case Studies",
+      "documentation": "Documentation"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "social": {
+      "title": "Follow Us",
+      "follow_us": "Follow us on social media"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Subscribe to receive the latest news",
+      "placeholder": "Your email",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "© {year} Plalz. All rights reserved."
   },
-  "Navigation": {
-    "home": "Home",
-    "services": "Services",
-    "about": "About",
-    "contact": "Contact"
+  "seo": {
+    "default_title": "Plalz - Professional Web Development",
+    "default_description": "Specialists in modern web development, UX/UI design and digital solutions that drive your business growth.",
+    "keywords": "web development, web design, e-commerce, SEO, digital marketing, React, Next.js"
   },
-  "Cart": {
-    "title": "Cart",
-    "items": "Items"
-  },
-  "User": {
-    "profile": "Profile",
-    "settings": "Settings"
-  },
-  "Footer": {
-    "copyright": "© 2024 Plalz. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+  "errors": {
+    "404": {
+      "title": "Page not found",
+      "description": "The page you're looking for doesn't exist or has been moved.",
+      "back_home": "Back to Home"
+    },
+    "500": {
+      "title": "Server error",
+      "description": "Something went wrong. We're working to fix it.",
+      "try_again": "Try Again"
+    },
+    "offline": {
+      "title": "Offline",
+      "description": "It seems you don't have an internet connection.",
+      "retry": "Retry"
+    }
   }
 } 

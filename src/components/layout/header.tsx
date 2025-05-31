@@ -1,20 +1,28 @@
 "use client";
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/lib/navigation';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { ThemeToggle } from '@/components/layout/theme-toggle';
-import { LanguageSelector } from '@/components/layout/language-selector';
+import { LanguageSwitcher, MobileLanguageSwitcher } from '@/components/i18n/language-switcher';
 import { CartButton } from '@/components/layout/cart-button';
 import { UserMenu } from '@/components/layout/user-menu';
 import { Navigation, MobileNavigation } from '@/components/layout/navigation';
+import { GlobalSearch } from '@/components/search/global-search';
+import { useSearchShortcut } from '@/lib/hooks/use-keyboard-shortcut';
 import { MenuIcon, CloseIcon, SearchIcon } from '@/components/ui/icons';
 import { cn } from '@/lib/utils';
 
 export function Header() {
+  const t = useTranslations('search');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  // Keyboard shortcut for search (Cmd+K or Ctrl+K)
+  useSearchShortcut(() => {
+    setIsSearchOpen(true);
+  });
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -37,48 +45,54 @@ export function Header() {
 
           {/* Utilities */}
           <div className="flex items-center space-x-2">
-            {/* Search */}
-            <div className="hidden md:flex items-center">
+            {/* Desktop Search */}
+            <div className="hidden md:block relative">
               {isSearchOpen ? (
-                <div className="flex items-center space-x-2">
-                  <Input
-                    type="search"
-                    placeholder="Buscar..."
-                    className="w-64"
-                    autoFocus
-                    onBlur={() => setIsSearchOpen(false)}
+                <div className="w-80">
+                  <GlobalSearch
+                    isOpen={isSearchOpen}
+                    onClose={() => setIsSearchOpen(false)}
+                    placeholder={t('placeholder')}
                   />
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setIsSearchOpen(false)}
-                  >
-                    <CloseIcon size={16} />
-                  </Button>
                 </div>
               ) : (
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={() => setIsSearchOpen(true)}
+                  className="flex items-center gap-2"
                 >
                   <SearchIcon size={16} />
+                  <span className="hidden lg:inline text-sm text-muted-foreground">
+                    {t('placeholder')}
+                  </span>
+                  <kbd className="hidden lg:inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground ml-auto">
+                    <span className="text-xs">⌘</span>K
+                  </kbd>
                 </Button>
               )}
             </div>
 
-            {/* Mobile Search */}
+            {/* Mobile Search Button */}
             <Button
               variant="ghost"
               size="sm"
               className="md:hidden"
               onClick={() => setIsSearchOpen(!isSearchOpen)}
+              aria-label={t('title')}
             >
               <SearchIcon size={16} />
             </Button>
 
-            {/* Language Selector */}
-            <LanguageSelector />
+            {/* Language Switcher - Desktop */}
+            <div className="hidden sm:block">
+              <LanguageSwitcher variant="compact" />
+            </div>
+
+            {/* Language Switcher - Mobile */}
+            <div className="sm:hidden">
+              <MobileLanguageSwitcher />
+            </div>
 
             {/* Theme Toggle */}
             <ThemeToggle />
@@ -95,6 +109,7 @@ export function Header() {
               size="sm"
               className="lg:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMobileMenuOpen ? (
                 <CloseIcon size={20} />
@@ -105,14 +120,13 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Search Bar */}
+        {/* Mobile Search */}
         {isSearchOpen && (
           <div className="md:hidden py-4 border-t">
-            <Input
-              type="search"
-              placeholder="Buscar..."
-              className="w-full"
-              autoFocus
+            <GlobalSearch
+              isOpen={isSearchOpen}
+              onClose={() => setIsSearchOpen(false)}
+              placeholder={t('placeholder')}
             />
           </div>
         )}
@@ -123,6 +137,14 @@ export function Header() {
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
       />
+
+      {/* Global Search Overlay for Desktop */}
+      {isSearchOpen && (
+        <div 
+          className="fixed inset-0 bg-black/20 z-40 md:hidden"
+          onClick={() => setIsSearchOpen(false)}
+        />
+      )}
     </header>
   );
 } 

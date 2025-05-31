@@ -1,4 +1,264 @@
 {
+  "navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "webDevelopment": "Desarrollo Web",
+    "ecommerce": "E-commerce",
+    "maintenance": "Mantenimiento",
+    "seo": "SEO",
+    "hosting": "Hosting",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto",
+    "pricing": "Precios",
+    "quote": "Cotizar",
+    "search": "Buscar",
+    "searchPlaceholder": "Buscar productos, servicios...",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "language": "Idioma"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones digitales completas para hacer crecer tu negocio",
+    "webDevelopment": {
+      "title": "Desarrollo Web",
+      "description": "Sitios web modernos, rápidos y optimizados para convertir visitantes en clientes"
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Tiendas online completas con gestión de inventario, pagos seguros y análisis detallados"
+    },
+    "maintenance": {
+      "title": "Mantenimiento Web",
+      "description": "Mantén tu sitio web actualizado, seguro y funcionando perfectamente"
+    },
+    "seo": {
+      "title": "SEO y Marketing Digital",
+      "description": "Aumenta tu visibilidad online y atrae más clientes potenciales"
+    },
+    "hosting": {
+      "title": "Hosting Premium",
+      "description": "Alojamiento web rápido, seguro y confiable para tu proyecto"
+    },
+    "web_development": {
+      "title": "Desarrollo Web"
+    }
+  },
+  "search": {
+    "title": "Resultados de Búsqueda",
+    "placeholder": "¿Qué estás buscando?",
+    "button": "Buscar",
+    "results": "resultados encontrados",
+    "noResults": "No se encontraron resultados para",
+    "suggestions": "Sugerencias:",
+    "clear": "Limpiar Búsqueda"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "warning": "Advertencia",
+    "info": "Información",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "yes": "Sí",
+    "no": "No",
+    "ok": "Aceptar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "continue": "Continuar",
+    "finish": "Finalizar",
+    "submit": "Enviar",
+    "reset": "Restablecer",
+    "clear": "Limpiar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "view": "Ver",
+    "download": "Descargar",
+    "upload": "Subir",
+    "share": "Compartir",
+    "copy": "Copiar",
+    "print": "Imprimir"
+  },
+  "seo": {
+    "default_title": "Plalz - Desarrollo Web Profesional y E-commerce en Madrid",
+    "default_description": "Agencia de desarrollo web especializada en sitios web profesionales, tiendas online y soluciones digitales. Más de 200 proyectos exitosos en Madrid y España.",
+    "keywords": "desarrollo web, diseño web, e-commerce, tienda online, SEO, hosting, mantenimiento web, Madrid, España, agencia digital",
+    "home": {
+      "title": "Desarrollo Web Profesional | Plalz Madrid",
+      "description": "Creamos sitios web profesionales y tiendas online que convierten. Desarrollo web moderno, SEO incluido y soporte 24/7. ¡Solicita tu cotización gratuita!"
+    },
+    "services": {
+      "title": "Servicios de Desarrollo Web | Plalz",
+      "description": "Servicios completos de desarrollo web: sitios corporativos, e-commerce, mantenimiento, SEO y hosting. Soluciones digitales profesionales en Madrid."
+    },
+    "portfolio": {
+      "title": "Portfolio de Proyectos Web | Plalz",
+      "description": "Descubre nuestros proyectos de desarrollo web y e-commerce. Más de 200 sitios web exitosos creados para empresas en Madrid y toda España."
+    },
+    "contact": {
+      "title": "Contacto - Agencia Web Plalz Madrid",
+      "description": "Contacta con nuestra agencia de desarrollo web en Madrid. Cotización gratuita para tu proyecto web. Teléfono: +34 91 123 45 67"
+    },
+    "about": {
+      "title": "Sobre Nosotros - Agencia Plalz Madrid",
+      "description": "Conoce a nuestro equipo de desarrollo web en Madrid. Más de 5 años creando soluciones digitales exitosas para empresas de todos los tamaños."
+    },
+    "pricing": {
+      "title": "Precios Desarrollo Web | Plalz Madrid",
+      "description": "Precios transparentes para desarrollo web y e-commerce. Desde €299 para sitios web profesionales. Cotización gratuita sin compromiso."
+    },
+    "blog": {
+      "title": "Blog de Desarrollo Web | Plalz",
+      "description": "Artículos sobre desarrollo web, SEO, e-commerce y tecnología. Consejos y tutoriales de nuestros expertos en desarrollo web."
+    }
+  },
+  "hero": {
+    "title": "Transformamos Ideas en Experiencias Digitales Extraordinarias",
+    "subtitle": "Desarrollo web profesional, e-commerce avanzado y soluciones digitales que impulsan tu negocio hacia el éxito",
+    "cta": {
+      "primary": "Comenzar Proyecto",
+      "secondary": "Ver Portfolio",
+      "quote": "Solicitar Cotización"
+    },
+    "features": {
+      "responsive": "Diseño Responsivo",
+      "fast": "Carga Rápida",
+      "secure": "100% Seguro",
+      "support": "Soporte 24/7"
+    }
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Expertos en desarrollo web con más de 5 años creando soluciones digitales exitosas",
+    "description": "En Plalz, combinamos creatividad, tecnología y estrategia para crear experiencias digitales que impulsan el crecimiento de tu negocio."
+  },
+  "contact": {
+    "title": "Contacta con Nosotros",
+    "subtitle": "¿Tienes un proyecto en mente? Hablemos y hagámoslo realidad",
+    "form": {
+      "name": {
+        "label": "Nombre completo",
+        "placeholder": "Tu nombre completo",
+        "error": "El nombre es requerido"
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "tu@email.com",
+        "error": "Ingresa un email válido"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntanos sobre tu proyecto...",
+        "error": "El mensaje es requerido"
+      },
+      "submit": "Enviar Mensaje",
+      "submitting": "Enviando...",
+      "success": "¡Mensaje enviado correctamente! Te contactaremos pronto.",
+      "error": "Error al enviar el mensaje. Inténtalo de nuevo."
+    }
+  },
+  "pricing": {
+    "title": "Planes y Precios",
+    "subtitle": "Soluciones adaptadas a cada necesidad y presupuesto"
+  },
+  "portfolio": {
+    "title": "Nuestro Portfolio",
+    "subtitle": "Proyectos que demuestran nuestra experiencia y creatividad",
+    "viewProject": "Ver Proyecto",
+    "technologies": "Tecnologías",
+    "client": "Cliente"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artículos, tutoriales y noticias sobre desarrollo web y tecnología",
+    "readMore": "Leer Más",
+    "author": "Autor",
+    "category": "Categoría"
+  },
+  "cart": {
+    "title": "Carrito de Compras",
+    "empty": "Tu carrito está vacío",
+    "item": "artículo",
+    "items": "artículos",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "quantity": "Cantidad",
+    "remove": "Eliminar",
+    "checkout": "Proceder al Pago",
+    "addToCart": "Añadir al Carrito",
+    "viewCart": "Ver Carrito"
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar Sesión",
+      "subtitle": "Accede a tu cuenta",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Iniciar Sesión",
+      "noAccount": "¿No tienes cuenta?",
+      "register": "Regístrate aquí"
+    },
+    "register": {
+      "title": "Crear Cuenta",
+      "subtitle": "Únete a nuestra comunidad",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Crear Cuenta",
+      "hasAccount": "¿Ya tienes cuenta?",
+      "login": "Inicia sesión aquí"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Empresa",
+      "about": "Sobre Nosotros",
+      "contact": "Contacto"
+    },
+    "services": {
+      "title": "Servicios",
+      "webDevelopment": "Desarrollo Web",
+      "ecommerce": "E-commerce",
+      "maintenance": "Mantenimiento",
+      "seo": "SEO",
+      "hosting": "Hosting"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "cookies": "Política de Cookies"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Suscríbete para recibir las últimas noticias y ofertas especiales",
+      "placeholder": "Tu correo electrónico",
+      "subscribe": "Suscribirse"
+    },
+    "copyright": "© 2024 Plalz. Todos los derechos reservados."
+  },
+  "errors": {
+    "404": {
+      "title": "Página No Encontrada",
+      "description": "La página que buscas no existe o ha sido movida.",
+      "button": "Volver al Inicio"
+    },
+    "500": {
+      "title": "Error del Servidor",
+      "description": "Ha ocurrido un error interno. Inténtalo de nuevo más tarde.",
+      "button": "Reintentar"
+    }
+  },
   "HomePage": {
     "title": "Bienvenido a Plalz",
     "description": "Tu plataforma de comercio electrónico de próxima generación",

@@ -18,44 +18,46 @@ import { cn } from '@/lib/utils';
 
 interface NavItem {
   href: string;
-  label: string;
+  labelKey: string;
   children?: NavItem[];
 }
 
 export function Navigation() {
-  const t = useTranslations('Navigation');
+  const t = useTranslations('navigation');
+  const tServices = useTranslations('services');
   const pathname = usePathname();
 
   const navItems: NavItem[] = [
     {
       href: '/',
-      label: 'Inicio',
+      labelKey: 'home',
     },
     {
       href: '/servicios',
-      label: 'Servicios',
+      labelKey: 'services',
       children: [
-        { href: '/servicios', label: 'Todos los Servicios' },
-        { href: '/servicios/paginas-web', label: 'Páginas Web' },
-        { href: '/servicios/paginas-web/corporativas', label: '• Páginas Corporativas' },
-        { href: '/servicios/paginas-web/e-commerce', label: '• Tiendas Online' },
-        { href: '/servicios/paginas-web/landing-pages', label: '• Landing Pages' },
-        { href: '/servicios/paginas-web/blogs', label: '• Blogs Profesionales' },
-        { href: '/servicios/mantenimiento', label: 'Mantenimiento Web' },
-        { href: '/servicios/mantenimiento/contenido', label: '• Mantenimiento de Contenido' },
+        { href: '/servicios', labelKey: 'services' },
+        { href: '/servicios/paginas-web', labelKey: 'web_development.title' },
+        { href: '/servicios/paginas-web/e-commerce', labelKey: 'ecommerce.title' },
+        { href: '/servicios/mantenimiento', labelKey: 'maintenance.title' },
+        { href: '/servicios/mantenimiento/contenido', labelKey: 'seo.title' },
       ],
     },
     {
       href: '/portfolio',
-      label: 'Portfolio',
+      labelKey: 'portfolio',
     },
     {
       href: '/blog',
-      label: 'Blog',
+      labelKey: 'blog',
     },
     {
-      href: '/contact',
-      label: 'Contacto',
+      href: '/precios',
+      labelKey: 'pricing',
+    },
+    {
+      href: '/contacto',
+      labelKey: 'contact',
     },
   ];
 
@@ -64,6 +66,13 @@ export function Navigation() {
       return pathname === '/';
     }
     return pathname.startsWith(href);
+  };
+
+  const getLabel = (item: NavItem) => {
+    if (item.href.startsWith('/servicios/') && item.href !== '/servicios') {
+      return tServices(item.labelKey);
+    }
+    return t(item.labelKey);
   };
 
   return (
@@ -80,49 +89,26 @@ export function Navigation() {
                     isActive(item.href) ? "text-primary" : "text-foreground"
                   )}
                 >
-                  {item.label}
+                  {getLabel(item)}
                   <ChevronDownIcon size={16} />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-64">
-                <DropdownMenuLabel>Nuestros Servicios</DropdownMenuLabel>
+                <DropdownMenuLabel>{tServices('title')}</DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                {item.children.map((child, index) => {
-                  // Add separator before maintenance section
-                  if (child.label === 'Mantenimiento Web') {
-                    return (
-                      <div key={child.href}>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem asChild>
-                          <Link
-                            href={child.href}
-                            className={cn(
-                              "w-full cursor-pointer font-medium",
-                              isActive(child.href) ? "bg-accent text-accent-foreground" : ""
-                            )}
-                          >
-                            {child.label}
-                          </Link>
-                        </DropdownMenuItem>
-                      </div>
-                    );
-                  }
-                  
-                  return (
-                    <DropdownMenuItem key={child.href} asChild>
-                      <Link
-                        href={child.href}
-                        className={cn(
-                          "w-full cursor-pointer",
-                          child.label.startsWith('•') ? "text-sm text-muted-foreground pl-4" : "font-medium",
-                          isActive(child.href) ? "bg-accent text-accent-foreground" : ""
-                        )}
-                      >
-                        {child.label}
-                      </Link>
-                    </DropdownMenuItem>
-                  );
-                })}
+                {item.children.map((child) => (
+                  <DropdownMenuItem key={child.href} asChild>
+                    <Link
+                      href={child.href}
+                      className={cn(
+                        "w-full cursor-pointer font-medium",
+                        isActive(child.href) ? "bg-accent text-accent-foreground" : ""
+                      )}
+                    >
+                      {getLabel(child)}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
               </DropdownMenuContent>
             </DropdownMenu>
           );
@@ -137,7 +123,7 @@ export function Navigation() {
               isActive(item.href) ? "text-primary" : "text-foreground"
             )}
           >
-            {item.label}
+            {getLabel(item)}
           </Link>
         );
       })}
@@ -147,39 +133,42 @@ export function Navigation() {
 
 // Mobile Navigation Component
 export function MobileNavigation({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const t = useTranslations('navigation');
+  const tServices = useTranslations('services');
   const pathname = usePathname();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const navItems: NavItem[] = [
     {
       href: '/',
-      label: 'Inicio',
+      labelKey: 'home',
     },
     {
       href: '/servicios',
-      label: 'Servicios',
+      labelKey: 'services',
       children: [
-        { href: '/servicios', label: 'Todos los Servicios' },
-        { href: '/servicios/paginas-web', label: 'Páginas Web' },
-        { href: '/servicios/paginas-web/corporativas', label: '• Páginas Corporativas' },
-        { href: '/servicios/paginas-web/e-commerce', label: '• Tiendas Online' },
-        { href: '/servicios/paginas-web/landing-pages', label: '• Landing Pages' },
-        { href: '/servicios/paginas-web/blogs', label: '• Blogs Profesionales' },
-        { href: '/servicios/mantenimiento', label: 'Mantenimiento Web' },
-        { href: '/servicios/mantenimiento/contenido', label: '• Mantenimiento de Contenido' },
+        { href: '/servicios', labelKey: 'services' },
+        { href: '/servicios/paginas-web', labelKey: 'web_development.title' },
+        { href: '/servicios/paginas-web/e-commerce', labelKey: 'ecommerce.title' },
+        { href: '/servicios/mantenimiento', labelKey: 'maintenance.title' },
+        { href: '/servicios/mantenimiento/contenido', labelKey: 'seo.title' },
       ],
     },
     {
       href: '/portfolio',
-      label: 'Portfolio',
+      labelKey: 'portfolio',
     },
     {
       href: '/blog',
-      label: 'Blog',
+      labelKey: 'blog',
     },
     {
-      href: '/contact',
-      label: 'Contacto',
+      href: '/precios',
+      labelKey: 'pricing',
+    },
+    {
+      href: '/contacto',
+      labelKey: 'contact',
     },
   ];
 
@@ -190,6 +179,13 @@ export function MobileNavigation({ isOpen, onClose }: { isOpen: boolean; onClose
     return pathname.startsWith(href);
   };
 
+  const getLabel = (item: NavItem) => {
+    if (item.href.startsWith('/servicios/') && item.href !== '/servicios') {
+      return tServices(item.labelKey);
+    }
+    return t(item.labelKey);
+  };
+
   const toggleDropdown = (href: string) => {
     setOpenDropdown(openDropdown === href ? null : href);
   };
@@ -198,66 +194,66 @@ export function MobileNavigation({ isOpen, onClose }: { isOpen: boolean; onClose
 
   return (
     <div className="lg:hidden">
-      <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm" onClick={onClose} />
-      <div className="fixed inset-y-0 right-0 z-50 w-full max-w-sm bg-background p-6 shadow-lg">
-        <div className="flex flex-col space-y-4">
-          {navItems.map((item) => {
-            if (item.children) {
-              return (
-                <div key={item.href}>
-                  <Button
-                    variant="ghost"
-                    className={cn(
-                      "w-full justify-between font-medium",
-                      isActive(item.href) ? "text-primary" : "text-foreground"
-                    )}
-                    onClick={() => toggleDropdown(item.href)}
-                  >
-                    {item.label}
-                    <ChevronDownIcon 
-                      size={16} 
+      <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm">
+        <div className="fixed inset-y-0 right-0 z-50 h-full w-full border-l bg-background p-6 shadow-lg sm:max-w-sm">
+          <div className="flex flex-col space-y-4">
+            {navItems.map((item) => {
+              if (item.children) {
+                return (
+                  <div key={item.href}>
+                    <Button
+                      variant="ghost"
                       className={cn(
-                        "transition-transform",
-                        openDropdown === item.href ? "rotate-180" : ""
+                        "w-full justify-between font-medium",
+                        isActive(item.href) ? "text-primary" : "text-foreground"
                       )}
-                    />
-                  </Button>
-                  {openDropdown === item.href && (
-                    <div className="ml-4 mt-2 space-y-2">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className={cn(
-                            "block py-2 px-4 text-sm transition-colors hover:text-primary",
-                            child.label.startsWith('•') ? "text-muted-foreground pl-6" : "font-medium",
-                            isActive(child.href) ? "text-primary bg-accent rounded" : "text-foreground"
-                          )}
-                          onClick={onClose}
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              );
-            }
+                      onClick={() => toggleDropdown(item.href)}
+                    >
+                      {getLabel(item)}
+                      <ChevronDownIcon 
+                        size={16} 
+                        className={cn(
+                          "transition-transform",
+                          openDropdown === item.href ? "rotate-180" : ""
+                        )}
+                      />
+                    </Button>
+                    {openDropdown === item.href && (
+                      <div className="ml-4 mt-2 space-y-2">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            href={child.href}
+                            onClick={onClose}
+                            className={cn(
+                              "block py-2 px-3 rounded-md text-sm transition-colors hover:bg-accent",
+                              isActive(child.href) ? "bg-accent text-accent-foreground" : ""
+                            )}
+                          >
+                            {getLabel(child)}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
 
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "block py-2 px-4 font-medium transition-colors hover:text-primary",
-                  isActive(item.href) ? "text-primary bg-accent rounded" : "text-foreground"
-                )}
-                onClick={onClose}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={onClose}
+                  className={cn(
+                    "block py-2 px-3 rounded-md font-medium transition-colors hover:bg-accent",
+                    isActive(item.href) ? "bg-accent text-accent-foreground" : ""
+                  )}
+                >
+                  {getLabel(item)}
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

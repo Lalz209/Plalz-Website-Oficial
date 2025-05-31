@@ -4,22 +4,188 @@
     "services": "Servicios",
     "about": "Nosotros",
     "contact": "Contacto",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "pricing": "Precios",
+    "quote": "Cotizar",
+    "search": "Buscar",
     "cart": "Carrito",
-    "login": "Iniciar Sesión"
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "dashboard": "Panel",
+    "profile": "Perfil",
+    "logout": "Cerrar Sesión"
   },
   "hero": {
     "title": "Transformamos tus ideas en realidad digital",
     "subtitle": "Creamos sitios web profesionales, tiendas online y soluciones digitales que impulsan tu negocio al siguiente nivel",
     "cta": "Comenzar Proyecto",
-    "cta_secondary": "Ver Servicios"
+    "cta_secondary": "Ver Servicios",
+    "trusted_by": "Confiado por más de {count} empresas",
+    "stats": {
+      "projects": "Proyectos Completados",
+      "clients": "Clientes Satisfechos",
+      "years": "Años de Experiencia",
+      "team": "Miembros del Equipo"
+    }
   },
   "services": {
     "title": "Nuestros Servicios",
     "subtitle": "Soluciones digitales completas para hacer crecer tu negocio",
-    "web_development": "Desarrollo Web",
-    "ecommerce": "E-commerce",
-    "maintenance": "Mantenimiento",
-    "seo": "SEO & Marketing"
+    "web_development": {
+      "title": "Desarrollo Web",
+      "description": "Sitios web modernos y responsivos con las últimas tecnologías",
+      "features": ["React & Next.js", "Diseño Responsivo", "SEO Optimizado", "Rendimiento Superior"]
+    },
+    "ecommerce": {
+      "title": "E-commerce",
+      "description": "Tiendas online completas que convierten visitantes en clientes",
+      "features": ["Carrito de Compras", "Pagos Seguros", "Gestión de Inventario", "Analytics Avanzado"]
+    },
+    "maintenance": {
+      "title": "Mantenimiento",
+      "description": "Mantenimiento y soporte continuo para tu sitio web",
+      "features": ["Actualizaciones", "Backups", "Monitoreo 24/7", "Soporte Técnico"]
+    },
+    "seo": {
+      "title": "SEO & Marketing",
+      "description": "Estrategias de marketing digital para aumentar tu visibilidad",
+      "features": ["SEO Técnico", "Marketing de Contenidos", "Redes Sociales", "Google Ads"]
+    }
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Somos un equipo apasionado por crear experiencias digitales excepcionales",
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Transformar ideas en experiencias digitales excepcionales que generen resultados reales para nuestros clientes."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Ser la agencia de desarrollo web líder en España, reconocida por nuestra innovación, calidad y compromiso."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "innovation": "Innovación",
+      "quality": "Calidad",
+      "transparency": "Transparencia",
+      "commitment": "Compromiso"
+    },
+    "team": {
+      "title": "Nuestro Equipo",
+      "subtitle": "Conoce a los profesionales que harán realidad tu proyecto"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Listo para comenzar tu proyecto? Hablemos",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "phone": "Teléfono",
+      "company": "Empresa",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "inquiry_type": "Tipo de Consulta",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado correctamente!",
+      "error": "Error al enviar el mensaje. Inténtalo de nuevo."
+    },
+    "info": {
+      "address": "Dirección",
+      "phone": "Teléfono",
+      "email": "Email",
+      "hours": "Horarios"
+    },
+    "inquiry_types": {
+      "general": "Consulta General",
+      "quote": "Solicitar Cotización",
+      "support": "Soporte Técnico",
+      "partnership": "Alianzas",
+      "career": "Oportunidades Laborales"
+    }
+  },
+  "pricing": {
+    "title": "Precios",
+    "subtitle": "Planes transparentes para cada necesidad",
+    "monthly": "Mensual",
+    "annual": "Anual",
+    "save": "Ahorra {percentage}%",
+    "popular": "Más Popular",
+    "features": "Características",
+    "get_started": "Comenzar",
+    "contact_sales": "Contactar Ventas",
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "description": "Perfecto para pequeños proyectos",
+        "price": "299"
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "Ideal para empresas en crecimiento",
+        "price": "599"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "Soluciones personalizadas",
+        "price": "1299"
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Descubre algunos de nuestros proyectos más destacados",
+    "view_project": "Ver Proyecto",
+    "live_demo": "Demo en Vivo",
+    "case_study": "Caso de Estudio",
+    "technologies": "Tecnologías",
+    "client": "Cliente",
+    "year": "Año",
+    "category": "Categoría",
+    "filters": {
+      "all": "Todos",
+      "web": "Desarrollo Web",
+      "ecommerce": "E-commerce",
+      "mobile": "Aplicaciones Móviles",
+      "design": "Diseño"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Últimas noticias y tendencias en desarrollo web",
+    "read_more": "Leer Más",
+    "read_time": "{minutes} min de lectura",
+    "published_on": "Publicado el",
+    "by_author": "Por {author}",
+    "categories": "Categorías",
+    "tags": "Etiquetas",
+    "related_posts": "Artículos Relacionados",
+    "share": "Compartir",
+    "comments": "Comentarios"
+  },
+  "search": {
+    "title": "Buscar",
+    "placeholder": "¿Qué estás buscando?",
+    "results": "Resultados de búsqueda",
+    "no_results": "No se encontraron resultados",
+    "suggestions": "Sugerencias",
+    "recent": "Búsquedas Recientes",
+    "popular": "Búsquedas Populares",
+    "clear_history": "Limpiar Historial",
+    "filters": {
+      "all": "Todo",
+      "services": "Servicios",
+      "blog": "Blog",
+      "portfolio": "Portfolio",
+      "pages": "Páginas"
+    },
+    "sort": {
+      "relevance": "Relevancia",
+      "date": "Fecha",
+      "popularity": "Popularidad"
+    }
   },
   "cart": {
     "title": "Carrito de Compras",
@@ -29,7 +195,32 @@
     "quantity": "Cantidad",
     "subtotal": "Subtotal",
     "total": "Total",
-    "checkout": "Proceder al Pago"
+    "checkout": "Proceder al Pago",
+    "continue_shopping": "Continuar Comprando",
+    "items_count": "{count, plural, =0 {Sin artículos} =1 {1 artículo} other {# artículos}}"
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar Sesión",
+      "email": "Email",
+      "password": "Contraseña",
+      "remember": "Recordarme",
+      "forgot_password": "¿Olvidaste tu contraseña?",
+      "submit": "Iniciar Sesión",
+      "no_account": "¿No tienes cuenta?",
+      "register_link": "Regístrate aquí"
+    },
+    "register": {
+      "title": "Crear Cuenta",
+      "name": "Nombre",
+      "email": "Email",
+      "password": "Contraseña",
+      "confirm_password": "Confirmar Contraseña",
+      "terms": "Acepto los términos y condiciones",
+      "submit": "Crear Cuenta",
+      "have_account": "¿Ya tienes cuenta?",
+      "login_link": "Inicia sesión aquí"
+    }
   },
   "common": {
     "loading": "Cargando...",
@@ -39,29 +230,78 @@
     "confirm": "Confirmar",
     "save": "Guardar",
     "edit": "Editar",
-    "delete": "Eliminar"
+    "delete": "Eliminar",
+    "close": "Cerrar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "view_all": "Ver Todo",
+    "learn_more": "Saber Más",
+    "get_started": "Comenzar",
+    "contact_us": "Contáctanos",
+    "try_again": "Intentar de Nuevo",
+    "coming_soon": "Próximamente"
   },
-  "components": {
-    "title": "Componentes",
-    "description": "Biblioteca de componentes UI"
+  "footer": {
+    "company": {
+      "title": "Empresa",
+      "about": "Sobre Nosotros",
+      "team": "Equipo",
+      "careers": "Carreras",
+      "contact": "Contacto"
+    },
+    "services": {
+      "title": "Servicios",
+      "web_development": "Desarrollo Web",
+      "ecommerce": "E-commerce",
+      "maintenance": "Mantenimiento",
+      "consulting": "Consultoría"
+    },
+    "resources": {
+      "title": "Recursos",
+      "blog": "Blog",
+      "portfolio": "Portfolio",
+      "case_studies": "Casos de Estudio",
+      "documentation": "Documentación"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "cookies": "Política de Cookies"
+    },
+    "social": {
+      "title": "Síguenos",
+      "follow_us": "Síguenos en redes sociales"
+    },
+    "newsletter": {
+      "title": "Newsletter",
+      "description": "Suscríbete para recibir las últimas noticias",
+      "placeholder": "Tu email",
+      "subscribe": "Suscribirse"
+    },
+    "copyright": "© {year} Plalz. Todos los derechos reservados."
   },
-  "Navigation": {
-    "home": "Inicio",
-    "services": "Servicios",
-    "about": "Nosotros",
-    "contact": "Contacto"
+  "seo": {
+    "default_title": "Plalz - Desarrollo Web Profesional",
+    "default_description": "Especialistas en desarrollo web moderno, diseño UX/UI y soluciones digitales que impulsan el crecimiento de tu negocio.",
+    "keywords": "desarrollo web, diseño web, e-commerce, SEO, marketing digital, React, Next.js"
   },
-  "Cart": {
-    "title": "Carrito",
-    "items": "Artículos"
-  },
-  "User": {
-    "profile": "Perfil",
-    "settings": "Configuración"
-  },
-  "Footer": {
-    "copyright": "© 2024 Plalz. Todos los derechos reservados.",
-    "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio"
+  "errors": {
+    "404": {
+      "title": "Página no encontrada",
+      "description": "La página que buscas no existe o ha sido movida.",
+      "back_home": "Volver al Inicio"
+    },
+    "500": {
+      "title": "Error del servidor",
+      "description": "Algo salió mal. Estamos trabajando para solucionarlo.",
+      "try_again": "Intentar de Nuevo"
+    },
+    "offline": {
+      "title": "Sin conexión",
+      "description": "Parece que no tienes conexión a internet.",
+      "retry": "Reintentar"
+    }
   }
 } 

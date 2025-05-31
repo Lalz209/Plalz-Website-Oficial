@@ -1,33 +1,37 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { ThemeProvider } from '@/components/providers/theme-provider';
+import { LocaleProvider } from '@/components/i18n/locale-provider';
 import { Toaster } from '@/components/ui/toaster';
 import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
+import { locales, type Locale } from '@/lib/navigation';
+import { getLocaleMetadata } from '@/lib/i18n/config';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
-
-const locales = ['en', 'es'];
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const isSpanish = params.locale === 'es';
+export async function generateMetadata({ 
+  params: { locale } 
+}: { 
+  params: { locale: string } 
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'seo' });
+  const localeData = getLocaleMetadata(locale as Locale);
+  
+  const title = t('default_title');
+  const description = t('default_description');
+  const keywords = t('keywords');
   
   return {
-    title: isSpanish 
-      ? 'Plalz - Desarrollo Web Profesional | Sitios Web Modernos y Rápidos'
-      : 'Plalz - Professional Web Development | Modern & Fast Websites',
-    description: isSpanish
-      ? 'Desarrollo web profesional con diseño moderno, velocidad optimizada y soporte 24/7. Desde $299 tu presencia digital estará lista en 7 días. ¡Consulta gratuita!'
-      : 'Professional web development with modern design, optimized speed and 24/7 support. From $299 your digital presence will be ready in 7 days. Free consultation!',
-    keywords: isSpanish
-      ? 'desarrollo web, diseño web, sitios web, páginas web, e-commerce, SEO, hosting, mantenimiento web, desarrollo frontend, desarrollo backend'
-      : 'web development, web design, websites, web pages, e-commerce, SEO, hosting, web maintenance, frontend development, backend development',
+    title,
+    description,
+    keywords: keywords.split(', '),
     authors: [{ name: 'Plalz Team' }],
     creator: 'Plalz',
     publisher: 'Plalz',
@@ -38,41 +42,34 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     },
     metadataBase: new URL('https://plalz.com'),
     alternates: {
-      canonical: '/',
+      canonical: `/${locale}`,
       languages: {
         'es': '/es',
         'en': '/en',
+        'x-default': '/es', // Default locale
       },
     },
     openGraph: {
-      title: isSpanish 
-        ? 'Plalz - Desarrollo Web Profesional | Sitios Web Modernos y Rápidos'
-        : 'Plalz - Professional Web Development | Modern & Fast Websites',
-      description: isSpanish
-        ? 'Desarrollo web profesional con diseño moderno, velocidad optimizada y soporte 24/7. Desde $299 tu presencia digital estará lista en 7 días.'
-        : 'Professional web development with modern design, optimized speed and 24/7 support. From $299 your digital presence will be ready in 7 days.',
-      url: 'https://plalz.com',
+      title,
+      description,
+      url: `https://plalz.com/${locale}`,
       siteName: 'Plalz',
       images: [
         {
-          url: '/og-image.jpg',
+          url: `/og-image-${locale}.jpg`,
           width: 1200,
           height: 630,
-          alt: isSpanish ? 'Plalz - Desarrollo Web Profesional' : 'Plalz - Professional Web Development',
+          alt: title,
         },
       ],
-      locale: params.locale,
+      locale: locale,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: isSpanish 
-        ? 'Plalz - Desarrollo Web Profesional'
-        : 'Plalz - Professional Web Development',
-      description: isSpanish
-        ? 'Desarrollo web profesional desde $299. Consulta gratuita disponible.'
-        : 'Professional web development from $299. Free consultation available.',
-      images: ['/twitter-image.jpg'],
+      title,
+      description,
+      images: [`/twitter-image-${locale}.jpg`],
       creator: '@plalz',
     },
     robots: {
@@ -91,6 +88,9 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       yandex: 'your-yandex-verification-code',
       yahoo: 'your-yahoo-verification-code',
     },
+    other: {
+      'google-site-verification': 'your-google-verification-code',
+    },
   };
 }
 
@@ -102,16 +102,50 @@ export default async function LocaleLayout({
   params: { locale: string };
 }) {
   // Validate that the incoming `locale` parameter is valid
-  if (!locale || !locales.includes(locale as any)) {
+  if (!locale || !locales.includes(locale as Locale)) {
     notFound();
   }
 
   // Providing all messages to the client side
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: 'seo' });
+  const localeData = getLocaleMetadata(locale as Locale);
+
+  // Generate hreflang links
+  const hreflangLinks: Array<{
+    rel: 'alternate';
+    hrefLang: string;
+    href: string;
+  }> = locales.map(loc => ({
+    rel: 'alternate' as const,
+    hrefLang: loc,
+    href: `https://plalz.com/${loc}`
+  }));
+
+  // Add x-default
+  hreflangLinks.push({
+    rel: 'alternate' as const,
+    hrefLang: 'x-default',
+    href: 'https://plalz.com/es'
+  });
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} dir={localeData.direction}>
       <head>
+        {/* Hreflang links */}
+        {hreflangLinks.map(link => (
+          <link
+            key={link.hrefLang}
+            rel={link.rel}
+            hrefLang={link.hrefLang}
+            href={link.href}
+          />
+        ))}
+        
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
         {/* Schema.org structured data */}
         <script
           type="application/ld+json"
@@ -122,23 +156,21 @@ export default async function LocaleLayout({
               "name": "Plalz",
               "url": "https://plalz.com",
               "logo": "https://plalz.com/logo.png",
-              "description": locale === 'es' 
-                ? "Desarrollo web profesional con diseño moderno, velocidad optimizada y soporte 24/7."
-                : "Professional web development with modern design, optimized speed and 24/7 support.",
+              "description": t('default_description'),
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "123 Business St.",
-                "addressLocality": "City",
-                "addressRegion": "State",
-                "postalCode": "12345",
-                "addressCountry": "US"
+                "streetAddress": "Calle Gran Vía 123",
+                "addressLocality": "Madrid",
+                "addressRegion": "Madrid",
+                "postalCode": "28013",
+                "addressCountry": "ES"
               },
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-555-123-4567",
+                "telephone": "+34 91 123 45 67",
                 "contactType": "customer service",
                 "email": "info@plalz.com",
-                "availableLanguage": ["English", "Spanish"]
+                "availableLanguage": ["Spanish", "English"]
               },
               "sameAs": [
                 "https://facebook.com/plalz",
@@ -148,42 +180,61 @@ export default async function LocaleLayout({
               ],
               "offers": {
                 "@type": "Offer",
-                "description": locale === 'es' ? "Desarrollo web desde $299" : "Web development from $299",
+                "description": locale === 'es' ? "Desarrollo web desde €299" : "Web development from €299",
                 "price": "299",
-                "priceCurrency": "USD"
+                "priceCurrency": localeData.currency
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "127"
+              },
+              "foundingDate": "2020",
+              "numberOfEmployees": "10-50",
+              "areaServed": {
+                "@type": "Country",
+                "name": locale === 'es' ? "España" : "Spain"
               }
             })
           }}
         />
-        
-        {/* Additional meta tags for better SEO */}
-        <meta name="theme-color" content="#12355B" />
-        <meta name="msapplication-TileColor" content="#12355B" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Plalz" />
-        
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+
+        {/* WebSite schema for search box */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Plalz",
+              "url": "https://plalz.com",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": `https://plalz.com/${locale}/buscar?q={search_term_string}`
+                },
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
       </head>
+      
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider messages={messages}>
-            {children}
-            <Toaster />
-          </NextIntlClientProvider>
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <LocaleProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {children}
+              <Toaster />
+            </ThemeProvider>
+          </LocaleProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

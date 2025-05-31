@@ -66,6 +66,11 @@ import {
   Filter,
   ExternalLink,
   BookOpen,
+  Folder,
+  Printer,
+  Loader2,
+  ArrowUpDown,
+  Award,
 } from 'lucide-react';
 
 export interface IconProps {
@@ -142,6 +147,11 @@ export {
   Filter as FilterIcon,
   ExternalLink as ExternalLinkIcon,
   BookOpen as BookOpenIcon,
+  Folder as FolderIcon,
+  Printer as PrinterIcon,
+  Loader2 as LoaderIcon,
+  ArrowUpDown as SortAscIcon,
+  Award as AwardIcon,
 };
 
 // Custom social media icons
